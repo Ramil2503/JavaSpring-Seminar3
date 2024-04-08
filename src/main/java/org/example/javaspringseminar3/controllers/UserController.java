@@ -24,8 +24,6 @@ public class UserController {
 //        registrationService.getDataProcessingService().getRepository().getUsers().add(user);
 //        return "User added from body!";
 
-        // didn't get the point of passing name, age, and email as parameters instead of just user
-        // the task was to have processRegistration method with these parameters
         registrationService.processRegistration(user.getName(), user.getAge(), user.getEmail());
         return "User added successfully";
     }

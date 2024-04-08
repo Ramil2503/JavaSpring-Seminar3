@@ -23,8 +23,6 @@ public class RegistrationService {
     //Метод processRegistration
     public void processRegistration(String name, int age, String email) {
         dataProcessingService.getRepository().getUsers().add(userService.createUser(name, age, email));
-        // we are already sending the notification in UserService
-        // I have commented the code for sending notification in UserService class
-        // notificationService.sendNotification("User created");
+        notificationService.sendNotification("User created");
     }
 }
